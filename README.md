@@ -4,6 +4,14 @@ Welcome to my personal blog of the Mobile Robotics course of the Robotics Engine
 ## Introduction
 The first day we started installing the docker needed to perform the practices. While we were waiting, we were explained how to use the [Unibotics](https://unibotics.org/) platform and the interface we have.
 
+## Practice 2 Follow line
+
+### Day 1
+El objetivo del día de hoy es hacer el filtro de color para poder visualizar la línea roja y conseguir el centroide. Debo tener en cuenta que la cámara del formula 1 no está centrada, asi que el centroide deberá estar un poco desplazado.
+
+![Captura desde 2023-10-09 09-42-19](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/8055f22c-5db2-4982-890b-4a19ccc66309)
+
+
 ## Practice 1 Vacuum cleaner 
 
 ### DAY 1
