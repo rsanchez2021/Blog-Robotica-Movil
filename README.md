@@ -11,6 +11,12 @@ El objetivo del día de hoy es hacer el filtro de color para poder visualizar la
 
 ![Captura desde 2023-10-09 09-42-19](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/8055f22c-5db2-4982-890b-4a19ccc66309)
 
+Una vez hecho el filtro de color y conseguir el centroide, la visión es así:
+
+![image](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/93374e9f-a3d8-49d8-b424-95c94e135d14)
+
+### Day 2
+El objetivo de hoy era onseguir dar una vuelta y ajustar el PID lo máximo posible. Tras varios intentos, la vuelta más rápida lo hace en 3:16 minutos. El objetivo del próximo día será separar entre curvas y rectas para poder establecervelocidadesdiferentes y ahorrar tiempo.
 
 ## Practice 1 Vacuum cleaner 
 
@@ -18,6 +24,7 @@ El objetivo del día de hoy es hacer el filtro de color para poder visualizar la
 Today I started the practice. The goal of today was to make the basics of the practice to then be able to make the algorithm more efficient. Basically, I have made the state machine with three states: FORWARD, BACK and TURN. With that, I have managed to "clean up" what is shown in the picture. The next goal is to add a random for the spin and implement a spiral.
 
 ![Screenshot from 2023-09-25 11-22-32](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/41298f92-c23f-46d1-a17f-6d6124e18718)
+
 
 ### DAY 2
 The goal of this day was to implement a random variable associated with the turn time and modify parameters to make it go smoother.
