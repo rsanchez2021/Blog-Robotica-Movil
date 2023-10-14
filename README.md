@@ -18,6 +18,9 @@ Una vez hecho el filtro de color y conseguir el centroide, la visión es así:
 ### Day 2
 El objetivo de hoy era onseguir dar una vuelta y ajustar el PID lo máximo posible. Tras varios intentos, la vuelta más rápida lo hace en 3:16 minutos. El objetivo del próximo día será separar entre curvas y rectas para poder establecervelocidadesdiferentes y ahorrar tiempo.
 
+### Day 3
+Una vez establecido la diferencia entre curvas y rectas dedpendiendo del error, el tiempo de una vuelta es de 160 segundos. Lo siguiente que debo hacer es 
+
 ## Practice 1 Vacuum cleaner 
 
 ### DAY 1
