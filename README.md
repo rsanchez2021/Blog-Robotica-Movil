@@ -19,9 +19,7 @@ Once the color filter is applied and the centroid is obtained, the vision looks 
 The objective for today was to complete a lap and fine-tune the PID control as much as possible. After several attempts, the fastest lap was completed in 3 minutes and 16 seconds. The goal for the next day will be to distinguish between curves and straight sections in order to set different speeds and save time.
 
 ### Day 3
-Once the distinction between curves and straight sections based on the error is established, the lap time is 160 seconds. 
-
-
+Once the distinction between curves and straight sections based on the error is established, the lap time is 160 seconds. If you want to see the video click [here](https://raw.githubusercontent.com/rsanchez2021/Blog-Robotica-Movil/main/p2_160.webm)
 
 The next step I need to take is to fine-tune the parameters gradually to reduce times. I considered adding a PID controller to the linear velocity when the error is very high (in curves), and although it worked very well, it was moving quite slowly:
 
@@ -29,9 +27,9 @@ The next step I need to take is to fine-tune the parameters gradually to reduce 
 
 
 ### Subsequent Days
-On the following days, I focused on refining the parameters to further reduce lap times. After several attempts, I achieved the fastest lap in **111 seconds**. However, that code, on other circuits, ended up with the car crashing. Therefore, the code I sent works for all circuits (with specific changes for each one), but the following [code]() is for the fast lap on the simple circuit.
+On the following days, I focused on refining the parameters to further reduce lap times. After several attempts, I achieved the fastest lap in **111 seconds**. However, that code, on other circuits, ended up with the car crashing. Therefore, the code I sent works for all circuits (with specific changes for each one), but the following [code](https://github.com/rsanchez2021/Blog-Robotica-Movil/blob/main/p2_line_v3.py) is for the fast lap on the simple circuit.
 
-Finally, this is my fastest lap on the simple circuit. The video is playing at 2x speed; if you want to watch it at normal speed, click [here]().
+Finally, this is my fastest lap on the simple circuit. The video is playing at 2x speed; if you want to watch it at normal speed, click [here](https://raw.githubusercontent.com/rsanchez2021/Blog-Robotica-Movil/main/p2_fast.webm).
 
 
 
