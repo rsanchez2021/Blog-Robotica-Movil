@@ -19,15 +19,26 @@ Once the color filter is applied and the centroid is obtained, the vision looks 
 The objective for today was to complete a lap and fine-tune the PID control as much as possible. After several attempts, the fastest lap was completed in 3 minutes and 16 seconds. The goal for the next day will be to distinguish between curves and straight sections in order to set different speeds and save time.
 
 ### Day 3
-Once the distinction between curves and straight sections based on the error is established, the lap time is 160 seconds. The next step I need to take is to fine-tune the parameters gradually to reduce times. I considered adding a PID controller to the linear velocity when the error is very high (in curves), and although it worked very well, it was moving quite slowly:
+Once the distinction between curves and straight sections based on the error is established, the lap time is 160 seconds. 
+
+
+
+The next step I need to take is to fine-tune the parameters gradually to reduce times. I considered adding a PID controller to the linear velocity when the error is very high (in curves), and although it worked very well, it was moving quite slowly:
 
 ![Screencast from 10-14-2023 07 17 05 PM (online-video-cutter com)(1)](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/cba9ea29-75d9-4e07-b88c-b144317996de)
 
 
-
-
 ### Subsequent Days
-On the following days, I focused on refining the parameters to further reduce lap times.
+On the following days, I focused on refining the parameters to further reduce lap times. After several attempts, I achieved the fastest lap in **111 seconds**. However, that code, on other circuits, ended up with the car crashing. Therefore, the code I sent works for all circuits (with specific changes for each one), but the following [code]() is for the fast lap on the simple circuit.
+
+Finally, this is my fastest lap on the simple circuit. The video is playing at 2x speed; if you want to watch it at normal speed, click [here]().
+
+
+
+[screencast-from-10-15-2023-02-34-23-pm-ipjma1fx_sGqsBapt.webm](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/f9ba6406-0699-4763-bbd8-439076174d83)
+
+
+
 
 ## Practice 1 Vacuum cleaner 
 
