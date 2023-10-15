@@ -7,19 +7,27 @@ The first day we started installing the docker needed to perform the practices. 
 ## Practice 2 Follow line
 
 ### Day 1
-El objetivo del día de hoy es hacer el filtro de color para poder visualizar la línea roja y conseguir el centroide. Debo tener en cuenta que la cámara del formula 1 no está centrada, asi que el centroide deberá estar un poco desplazado.
+Today's goal is to create a color filter to visualize the red line and obtain the centroid. I must take into account that the Formula 1 camera is not centered, so the centroid will be slightly offset.
 
 ![Captura desde 2023-10-09 09-42-19](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/8055f22c-5db2-4982-890b-4a19ccc66309)
 
-Una vez hecho el filtro de color y conseguir el centroide, la visión es así:
+Once the color filter is applied and the centroid is obtained, the vision looks like this:
 
 ![image](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/93374e9f-a3d8-49d8-b424-95c94e135d14)
 
 ### Day 2
-El objetivo de hoy era onseguir dar una vuelta y ajustar el PID lo máximo posible. Tras varios intentos, la vuelta más rápida lo hace en 3:16 minutos. El objetivo del próximo día será separar entre curvas y rectas para poder establecervelocidadesdiferentes y ahorrar tiempo.
+The objective for today was to complete a lap and fine-tune the PID control as much as possible. After several attempts, the fastest lap was completed in 3 minutes and 16 seconds. The goal for the next day will be to distinguish between curves and straight sections in order to set different speeds and save time.
 
 ### Day 3
-Una vez establecido la diferencia entre curvas y rectas dedpendiendo del error, el tiempo de una vuelta es de 160 segundos. Lo siguiente que debo hacer es 
+Once the distinction between curves and straight sections based on the error is established, the lap time is 160 seconds. The next step I need to take is to fine-tune the parameters gradually to reduce times. I considered adding a PID controller to the linear velocity when the error is very high (in curves), and although it worked very well, it was moving quite slowly:
+
+![Screencast from 10-14-2023 07 17 05 PM (online-video-cutter com)(1)](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/cba9ea29-75d9-4e07-b88c-b144317996de)
+
+
+
+
+### Subsequent Days
+On the following days, I focused on refining the parameters to further reduce lap times.
 
 ## Practice 1 Vacuum cleaner 
 
