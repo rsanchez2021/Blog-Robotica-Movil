@@ -4,6 +4,14 @@ Welcome to my personal blog of the Mobile Robotics course of the Robotics Engine
 ## Introduction
 The first day we started installing the docker needed to perform the practices. While we were waiting, we were explained how to use the [Unibotics](https://unibotics.org/) platform and the interface we have.
 
+## Practice 3 Obstacle Avoid
+
+### Day 1
+el primer día, nos han explicado la práctica en detalle y cómo debemos calcular las fuerzas y posibles errores que podemos tener. Nos han recalcado que el waypoint no debe ser exacto, debe ser un área, porque sino el coche se da la vuelta. Además, tenemos que tener cuidado con las fuerzas pues se pueden quedar en un punto muerto. 
+
+Hoy he toqueteado las funciiones dadas y hecho un esbozo de la práctica
+
+
 ## Practice 2 Follow line
 
 ### Day 1
