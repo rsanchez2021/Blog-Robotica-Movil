@@ -17,63 +17,6 @@ Welcome to my personal blog of the Mobile Robotics course of the Robotics Engine
 ## Introduction
 The first day we started installing the docker needed to perform the practices. While we were waiting, we were explained how to use the [Unibotics](https://unibotics.org/) platform and the interface we have.
 
-## Practice 3 Obstacle Avoid
-The objective of this practice is for the vehicle to successfully complete a full circuit without encountering any obstacles, such as walls or other vehicles. To achieve this, it is equipped with a laser system, and it accomplishes the task by calculating both repulsive forces (resulting from obstacles) and attractive forces (related to waypoints).
-
-### Day 1
-el primer día, nos han explicado la práctica en detalle y cómo debemos calcular las fuerzas y posibles errores que podemos tener. Nos han recalcado que el waypoint no debe ser exacto, debe ser un área, porque sino el coche se da la vuelta. Además, tenemos que tener cuidado con las fuerzas pues se pueden quedar en un punto muerto. 
-
-Hoy he toqueteado las funciiones dadas y hecho un esbozo de la práctica
-
-### Day 2
-El día de hoy, nos han explicado posibles errores que pudiésemos tener. Uno de ellos es en la función de leer el láser, en caso de que los datos del láser vengan vacíos, si se utiliza un bluce while o un for y asumimos que tiene un rango de 10, no funciona. Para solucionarlo nos han dado varias opciones como puede ser usar *enumerate(laser_data.values* o *for dist in laser_data.values*. Para esta práctica, he decicdido que la mejor opción es la siguiente:
-
-```python3
-def parse_laser_data(laser_data):
-    laser = []
-    for i in range(len(laser_data.values)): #no asuminos que tiene 180
-        dist = laser_data.values[i]/1000.0
-        angle = math.radians(i)
-        laser += [(dist, angle)]
-    return laser
-```
-
-Otra cosa que nos explicaron fue la función para hacer la fuerza repulsiva. 
-
-## Practice 2 Follow line
-
-### Day 1
-Today's goal is to create a color filter to visualize the red line and obtain the centroid. I must take into account that the Formula 1 camera is not centered, so the centroid will be slightly offset.
-
-![Captura desde 2023-10-09 09-42-19](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/8055f22c-5db2-4982-890b-4a19ccc66309)
-
-Once the color filter is applied and the centroid is obtained, the vision looks like this:
-
-![image](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/93374e9f-a3d8-49d8-b424-95c94e135d14)
-
-### Day 2
-The objective for today was to complete a lap and fine-tune the PID control as much as possible. After several attempts, the fastest lap was completed in 3 minutes and 16 seconds. The goal for the next day will be to distinguish between curves and straight sections in order to set different speeds and save time.
-
-### Day 3
-Once the distinction between curves and straight sections based on the error is established, the lap time is 160 seconds. If you want to see the video click [here](https://raw.githubusercontent.com/rsanchez2021/Blog-Robotica-Movil/main/p2_160.webm)
-
-The next step I need to take is to fine-tune the parameters gradually to reduce times. I considered adding a PID controller to the linear velocity when the error is very high (in curves), and although it worked very well, it was moving quite slowly:
-
-![Screencast from 10-14-2023 07 17 05 PM (online-video-cutter com)(1)](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/cba9ea29-75d9-4e07-b88c-b144317996de)
-
-
-### Subsequent Days
-On the following days, I focused on refining the parameters to further reduce lap times. After several attempts, I achieved the fastest lap in **111 seconds**. However, that code, on other circuits, ended up with the car crashing. Therefore, the code I sent works for all circuits (with specific changes for each one), but the following [code](https://github.com/rsanchez2021/Blog-Robotica-Movil/blob/main/p2_line_v3.py) is for the fast lap on the simple circuit.
-
-Finally, this is my fastest lap on the simple circuit. The video is playing at 2x speed; if you want to watch it at normal speed, click [here](https://raw.githubusercontent.com/rsanchez2021/Blog-Robotica-Movil/main/p2_fast.webm).
-
-
-
-[screencast-from-10-15-2023-02-34-23-pm-ipjma1fx_sGqsBapt.webm](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/f9ba6406-0699-4763-bbd8-439076174d83)
-
-
-
-
 ## Practice 1 Vacuum cleaner 
 
 ### DAY 1
@@ -108,3 +51,57 @@ This is the corresponding video with my final code for three minutes and a photo
 
 As a final conclusion, the goal was to make an algorithm based on a reactive code with a state machine, a random time for the spin and a fourth spiral state.
 
+## Practice 2 Follow line
+
+### Day 1
+Today's goal is to create a color filter to visualize the red line and obtain the centroid. I must take into account that the Formula 1 camera is not centered, so the centroid will be slightly offset.
+
+![Captura desde 2023-10-09 09-42-19](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/8055f22c-5db2-4982-890b-4a19ccc66309)
+
+Once the color filter is applied and the centroid is obtained, the vision looks like this:
+
+![image](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/93374e9f-a3d8-49d8-b424-95c94e135d14)
+
+### Day 2
+The objective for today was to complete a lap and fine-tune the PID control as much as possible. After several attempts, the fastest lap was completed in 3 minutes and 16 seconds. The goal for the next day will be to distinguish between curves and straight sections in order to set different speeds and save time.
+
+### Day 3
+Once the distinction between curves and straight sections based on the error is established, the lap time is 160 seconds. If you want to see the video click [here](https://raw.githubusercontent.com/rsanchez2021/Blog-Robotica-Movil/main/p2_160.webm)
+
+The next step I need to take is to fine-tune the parameters gradually to reduce times. I considered adding a PID controller to the linear velocity when the error is very high (in curves), and although it worked very well, it was moving quite slowly:
+
+![Screencast from 10-14-2023 07 17 05 PM (online-video-cutter com)(1)](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/cba9ea29-75d9-4e07-b88c-b144317996de)
+
+
+### Subsequent Days
+On the following days, I focused on refining the parameters to further reduce lap times. After several attempts, I achieved the fastest lap in **111 seconds**. However, that code, on other circuits, ended up with the car crashing. Therefore, the code I sent works for all circuits (with specific changes for each one), but the following [code](https://github.com/rsanchez2021/Blog-Robotica-Movil/blob/main/p2_line_v3.py) is for the fast lap on the simple circuit.
+
+Finally, this is my fastest lap on the simple circuit. The video is playing at 2x speed; if you want to watch it at normal speed, click [here](https://raw.githubusercontent.com/rsanchez2021/Blog-Robotica-Movil/main/p2_fast.webm).
+
+
+
+[screencast-from-10-15-2023-02-34-23-pm-ipjma1fx_sGqsBapt.webm](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/f9ba6406-0699-4763-bbd8-439076174d83)
+
+
+## Practice 3 Obstacle Avoid
+The objective of this practice is for the vehicle to successfully complete a full circuit without encountering any obstacles, such as walls or other vehicles. To achieve this, it is equipped with a laser system, and it accomplishes the task by calculating both repulsive forces (resulting from obstacles) and attractive forces (related to waypoints).
+
+### Day 1
+el primer día, nos han explicado la práctica en detalle y cómo debemos calcular las fuerzas y posibles errores que podemos tener. Nos han recalcado que el waypoint no debe ser exacto, debe ser un área, porque sino el coche se da la vuelta. Además, tenemos que tener cuidado con las fuerzas pues se pueden quedar en un punto muerto. 
+
+Hoy he toqueteado las funciiones dadas y hecho un esbozo de la práctica
+
+### Day 2
+El día de hoy, nos han explicado posibles errores que pudiésemos tener. Uno de ellos es en la función de leer el láser, en caso de que los datos del láser vengan vacíos, si se utiliza un bluce while o un for y asumimos que tiene un rango de 10, no funciona. Para solucionarlo nos han dado varias opciones como puede ser usar *enumerate(laser_data.values* o *for dist in laser_data.values*. Para esta práctica, he decicdido que la mejor opción es la siguiente:
+
+```python3
+def parse_laser_data(laser_data):
+    laser = []
+    for i in range(len(laser_data.values)): #no asuminos que tiene 180
+        dist = laser_data.values[i]/1000.0
+        angle = math.radians(i)
+        laser += [(dist, angle)]
+    return laser
+```
+
+Otra cosa que nos explicaron fue la función para hacer la fuerza repulsiva. 
