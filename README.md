@@ -1,16 +1,42 @@
 # Mobile Robotics Blog
 Welcome to my personal blog of the Mobile Robotics course of the Robotics Engineering degree at Universidad Rey Juan Carlos. In this blog I will be updating the progress in the practices of the subjects as well as the final result of each of them. I hope you like it.
 
+* [Index][Ind]
+* [Practice 1][p1]
+* [Practice 2][p2]
+* [Practice 3][p3]
+
+[Ind]: https://github.com/rsanchez2021/Blog-Robotica-Movil/main/README
+[p1]: https://github.com/ToniLMM/Blog-Robotica-Movil/blob/main/README.md#practice-1-basic-vacuum-cleaner
+[p2]: https://github.com/ToniLMM/Blog-Robotica-Movil/blob/main/README.md#practice-2-follow-line
+[p3]: https://github.com/ToniLMM/Blog-Robotica-Movil/blob/main/README.md#practice-3-obstacle-avoidance
+
+
 ## Introduction
 The first day we started installing the docker needed to perform the practices. While we were waiting, we were explained how to use the [Unibotics](https://unibotics.org/) platform and the interface we have.
 
 ## Practice 3 Obstacle Avoid
+The objective of this practice is for the vehicle to successfully complete a full circuit without encountering any obstacles, such as walls or other vehicles. To achieve this, it is equipped with a laser system, and it accomplishes the task by calculating both repulsive forces (resulting from obstacles) and attractive forces (related to waypoints).
 
 ### Day 1
 el primer día, nos han explicado la práctica en detalle y cómo debemos calcular las fuerzas y posibles errores que podemos tener. Nos han recalcado que el waypoint no debe ser exacto, debe ser un área, porque sino el coche se da la vuelta. Además, tenemos que tener cuidado con las fuerzas pues se pueden quedar en un punto muerto. 
 
 Hoy he toqueteado las funciiones dadas y hecho un esbozo de la práctica
 
+### Day 2
+El día de hoy, nos han explicado posibles errores que pudiésemos tener. Uno de ellos es en la función de leer el láser, en caso de que los datos del láser vengan vacíos, si se utiliza un bluce while o un for y asumimos que tiene un rango de 10, no funciona. Para solucionarlo nos han dado varias opciones como puede ser usar *enumerate(laser_data.values* o *for dist in laser_data.values*. Para esta práctica, he decicdido que la mejor opción es la siguiente:
+
+```python3
+def parse_laser_data(laser_data):
+    laser = []
+    for i in range(len(laser_data.values)): #no asuminos que tiene 180
+        dist = laser_data.values[i]/1000.0
+        angle = math.radians(i)
+        laser += [(dist, angle)]
+    return laser
+```
+
+Otra cosa que nos explicaron fue la función para hacer la fuerza repulsiva. 
 
 ## Practice 2 Follow line
 
