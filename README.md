@@ -87,21 +87,21 @@ Finally, this is my fastest lap on the simple circuit. The video is playing at 2
 The objective of this practice is for the vehicle to successfully complete a full circuit without encountering any obstacles, such as walls or other vehicles. To achieve this, it is equipped with a laser system, and it accomplishes the task by calculating both repulsive forces (resulting from obstacles) and attractive forces (related to waypoints).
 
 ### Day 1
-el primer día, nos han explicado la práctica en detalle y cómo debemos calcular las fuerzas y posibles errores que podemos tener. Nos han recalcado que el waypoint no debe ser exacto, debe ser un área, porque sino el coche se da la vuelta. Además, tenemos que tener cuidado con las fuerzas pues se pueden quedar en un punto muerto. 
+On the first day, we were provided with a detailed explanation of the practical procedure and how to calculate the forces and potential errors that may arise. It was emphasized that the waypoint should not be precise; rather, it should represent an area, as a precise waypoint could result in the vehicle overturning. Additionally, we need to exercise caution with the forces, as they can become trapped in a local minimum. This means that both forces cancel each other out, causing the vehicle to remain stationary. To address this, one option is to wait for a certain period, and if the situation persists, execute a turn and continue, repeating this process until escaping the local minimum is achieved.
 
-Hoy he toqueteado las funciiones dadas y hecho un esbozo de la práctica
+Today, I have experimented with the provided functions and made an initial outline of the practical exercise.
 
 ### Day 2
-El día de hoy, nos han explicado posibles errores que pudiésemos tener. Uno de ellos es en la función de leer el láser, en caso de que los datos del láser vengan vacíos, si se utiliza un bluce while o un for y asumimos que tiene un rango de 10, no funciona. Para solucionarlo nos han dado varias opciones como puede ser usar *enumerate(laser_data.values* o *for dist in laser_data.values*. Para esta práctica, he decicdido que la mejor opción es la siguiente:
+Today, we were informed about potential errors we might encounter. One of them pertains to the laser data reading function. In the event that the laser data arrives empty, if we utilize a while loop or a for loop and assume a range of 10, it does not function correctly. To address this issue, several solutions were provided, such as using *enumerate(laser_data.values)* or *for dist in laser_data.values*. For this practice, I have decided that the best option is as follows:
 
 ```python3
 def parse_laser_data(laser_data):
     laser = []
-    for i in range(len(laser_data.values)): #no asuminos que tiene 180
+    for i in range(len(laser_data.values)):
         dist = laser_data.values[i]/1000.0
         angle = math.radians(i)
         laser += [(dist, angle)]
     return laser
 ```
 
-Otra cosa que nos explicaron fue la función para hacer la fuerza repulsiva. 
+Another thing that was explained to us was the function for creating the repulsive force. As can be seen in the diagram, specific weights need to be assigned based on the distance to ensure that the repulsive force is accurate.
