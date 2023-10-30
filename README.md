@@ -2,14 +2,16 @@
 Welcome to my personal blog of the Mobile Robotics course of the Robotics Engineering degree at Universidad Rey Juan Carlos. In this blog I will be updating the progress in the practices of the subjects as well as the final result of each of them. I hope you like it.
 
 * [Index][Ind]
+* [Introduction][intro]
 * [Practice 1][p1]
 * [Practice 2][p2]
 * [Practice 3][p3]
 
 [Ind]: https://github.com/rsanchez2021/Blog-Robotica-Movil/main/README
-[p1]: https://github.com/ToniLMM/Blog-Robotica-Movil/blob/main/README.md#practice-1-basic-vacuum-cleaner
-[p2]: https://github.com/ToniLMM/Blog-Robotica-Movil/blob/main/README.md#practice-2-follow-line
-[p3]: https://github.com/ToniLMM/Blog-Robotica-Movil/blob/main/README.md#practice-3-obstacle-avoidance
+[intro]: https://github.com/rsanchez2021/Blog-Robotica-Movil/blob/main/README.md#introduction
+[p1]: https://github.com/rsanchez2021/Blog-Robotica-Movil/blob/main/README.md#practice-1-vacuum-cleaner
+[p2]: https://github.com/rsanchez2021/Blog-Robotica-Movil/blob/main/README.md#practice-2-follow-line
+[p3]: https://github.com/rsanchez2021/Blog-Robotica-Movil/blob/main/README.md#practice-3-obstacle-avoid
 
 
 ## Introduction
@@ -102,8 +104,6 @@ This is the corresponding video with my final code for three minutes and a photo
 
 
 ![Screenshot from 2023-09-28 17-56-28](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/3dde564e-6654-45eb-87c5-b37482a35cf6)
-
-
 
 
 As a final conclusion, the goal was to make an algorithm based on a reactive code with a state machine, a random time for the spin and a fourth spiral state.
