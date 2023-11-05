@@ -84,15 +84,15 @@ Finally, this is my fastest lap on the simple circuit. The video is playing at 2
 
 
 ## Practice 3 Obstacle Avoid
-The objective of this practice is for the vehicle to successfully complete a full circuit without encountering any obstacles, such as walls or other vehicles. To achieve this, it is equipped with a laser system, and it accomplishes the task by calculating both repulsive forces (resulting from obstacles) and attractive forces (related to waypoints).
+The objective of this practice is to make the vehicle successfully complete a full lap of the circuit without encountering any obstacles, such as walls or other vehicles. To achieve this, it is equipped with a laser system, and it accomplishes the task by calculating both repulsive forces (resulting from obstacles) and attractive forces (related to waypoints).
 
 ### Day 1
-On the first day, we were provided with a detailed explanation of the practical procedure and how to calculate the forces and potential errors that may arise. It was emphasized that the waypoint should not be precise; rather, it should represent an area, as a precise waypoint could result in the vehicle overturning. Additionally, we need to exercise caution with the forces, as they can become trapped in a local minimum. This means that both forces cancel each other out, causing the vehicle to remain stationary. To address this, one option is to wait for a certain period, and if the situation persists, execute a turn and continue, repeating this process until escaping the local minimum is achieved.
+On the first day, we were provided with a detailed explanation of the practical procedure and how to calculate the forces and potential errors that may arise. They emphasized that the waypoint should not be precise; rather, it should be represented in area, as a precise waypoint could result in the vehicle overturning. Additionally,  we must be careful with the forces, as they can become trapped in a local minimum. This means that both forces cancel each other out, causing the vehicle to remain stationary. To address this, one option is to wait for a certain period, and if the situation persists, execute a turn and continue, repeating this process until escaping the local minimum is achieved.
 
 Today, I have experimented with the provided functions and made an initial outline of the practical exercise.
 
 ### Day 2
-Today, we were informed about potential errors we might encounter. One of them pertains to the laser data reading function. In the event that the laser data arrives empty, if we utilize a while loop or a for loop and assume a range of 10, it does not function correctly. To address this issue, several solutions were provided, such as using *enumerate(laser_data.values)* or *for dist in laser_data.values*. For this practice, I have decided that the best option is as follows:
+Today, we were informed about potential errors we might encounter. One of them pertains to the laser data reading function. In the event that the laser data arrives empty, if we utilize a while loop or a for loop and assume a range of 10, it does not function correctly. To address this issue, several solutions were provided, such as using enumerate(laser_data.values) or for dist in laser_data.values. For this practice, I have decided that the best option is as follows:
 
 ```python3
 def parse_laser_data(laser_data):
@@ -105,3 +105,15 @@ def parse_laser_data(laser_data):
 ```
 
 Another thing that was explained to us was the function for creating the repulsive force. As can be seen in the diagram, specific weights need to be assigned based on the distance to ensure that the repulsive force is accurate.
+
+### Day 3
+
+Today, after implementing the majority of the functions, I focused on fine-tuning the weighting of the forces to optimize the resultant vector. Increasing the weight of the repulsive force caused the car to veer off the track and move backward. On the other hand, a significant increase in the weight of the attractive force led to the car colliding with the walls.
+
+Moreover, when I achieved a relatively balanced set of weights to make it work, there was an issue with certain cars getting stuck in a local minimum. I attempted to implement a function that, in the event of such a situation, would wait for a period and, if the issue persisted, proceed in a straight path. However, I was unable to find a solution that allowed the function to address this challenge while keeping the code responsive.
+
+AÑADIR VIDEO MINIMO LOCAL
+
+### Rest of days
+
+
