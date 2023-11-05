@@ -104,11 +104,26 @@ def parse_laser_data(laser_data):
     return laser
 ```
 
-Another thing that was explained to us was the function for creating the repulsive force. As can be seen in the diagram, specific weights need to be assigned based on the distance to ensure that the repulsive force is accurate.
+Another thing that was explained to us was the function for creating the repulsive force. As can be seen in the diagram and in the code, specific weights need to be assigned based on the distance to ensure that the repulsive force is accurate.
+
+```python
+x = 1 / distance * math.cos(angle - math.pi / 2) * -1
+y = 1 / distance * math.sin(angle - math.pi / 2) * -1
+
+```
+
+AÑADIR DIBUJO FUERZAS REPULSIVAS
 
 ### Day 3
 
-Today, after implementing the majority of the functions, I focused on fine-tuning the weighting of the forces to optimize the resultant vector. Increasing the weight of the repulsive force caused the car to veer off the track and move backward. On the other hand, a significant increase in the weight of the attractive force led to the car colliding with the walls.
+Today, after implementing the majority of the functions, I focused on fine-tuning the weighting of the forces to optimize the resultant vector. Increasing the weight of the repulsive force caused the car to veer off the track and move backward. On the other hand, a significant increase in the weight of the attractive force led to the car colliding with the walls.These have been the weights that I have given to each force
+
+```python
+ALPHA = 3.5
+BETA = 0.00005
+resultant_force = ALPHA * atractive_force + BETA * repulsive_fource
+```
+
 
 Moreover, when I achieved a relatively balanced set of weights to make it work, there was an issue with certain cars getting stuck in a local minimum. I attempted to implement a function that, in the event of such a situation, would wait for a period and, if the issue persisted, proceed in a straight path. However, I was unable to find a solution that allowed the function to address this challenge while keeping the code responsive.
 
@@ -116,4 +131,7 @@ AÑADIR VIDEO MINIMO LOCAL
 
 ### Rest of days
 
+For the remaining days, what I needed to do was to correct minor errors, such as variable names, and debug the code.
+Finally, this is the video of the final submission:
 
+AÑADIR VIDEO FINAL
