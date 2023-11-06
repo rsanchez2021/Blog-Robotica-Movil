@@ -139,4 +139,8 @@ During the remaining days, my tasks mainly involved addressing minor errors, suc
 
 
 ### Final video
-AÑADIR VIDEO FINAL
+This is the final video accelerated x2, if you want to see it at normal speed [click](https://github.com/rsanchez2021/Blog-Robotica-Movil/blob/main/p3_final.webm) here.
+
+[p3-final_PdR7TvHw.webm](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/1614c418-c97c-4ab0-af90-899c5d7fb1d2)
+
+
