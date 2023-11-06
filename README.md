@@ -104,15 +104,13 @@ def parse_laser_data(laser_data):
     return laser
 ```
 
-Another thing that was explained to us was the function for creating the repulsive force. As can be seen in the diagram and in the code, specific weights need to be assigned based on the distance to ensure that the repulsive force is accurate.
+Another thing that was explained to us was the function for creating the repulsive force. As can be seen in the code, specific weights need to be assigned based on the distance to ensure that the repulsive force is accurate.
 
 ```python
 x = 1 / distance * math.cos(angle - math.pi / 2) * -1
 y = 1 / distance * math.sin(angle - math.pi / 2) * -1
 
 ```
-
-AÑADIR DIBUJO FUERZAS REPULSIVAS
 
 ### Day 3
 
@@ -131,7 +129,9 @@ AÑADIR VIDEO MINIMO LOCAL
 
 ### Rest of days
 
-For the remaining days, what I needed to do was to correct minor errors, such as variable names, and debug the code.
-Finally, this is the video of the final submission:
+During the remaining days, my tasks mainly involved addressing minor errors, such as variable names, and debugging the code. When I attempted to enhance the code, I encountered issues, as the car was veering off the track, as depicted in the image. This problem arose because I had not defined the target area as sufficiently large for the car to reach and make a successful turnaround.
 
+
+
+### Final video
 AÑADIR VIDEO FINAL
