@@ -125,12 +125,17 @@ resultant_force = ALPHA * atractive_force + BETA * repulsive_fource
 
 Moreover, when I achieved a relatively balanced set of weights to make it work, there was an issue with certain cars getting stuck in a local minimum. I attempted to implement a function that, in the event of such a situation, would wait for a period and, if the issue persisted, proceed in a straight path. However, I was unable to find a solution that allowed the function to address this challenge while keeping the code responsive.
 
-AÑADIR VIDEO MINIMO LOCAL
+
+[minimo-local_lDbwaWyZ.webm](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/71cac2a0-6eb7-4e30-a8c1-5b9755e0f86a)
+
+
 
 ### Rest of days
 
 During the remaining days, my tasks mainly involved addressing minor errors, such as variable names, and debugging the code. When I attempted to enhance the code, I encountered issues, as the car was veering off the track, as depicted in the image. This problem arose because I had not defined the target area as sufficiently large for the car to reach and make a successful turnaround.
 
+
+[screencast-from-11-06-2023-060634-pm_c2x59bm5.webm](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/c79cbd49-cf85-453a-a222-454a2d2cb94b)
 
 
 ### Final video
