@@ -143,4 +143,7 @@ This is the final video accelerated x2, if you want to see it at normal speed [c
 
 [p3-final_PdR7TvHw.webm](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/1614c418-c97c-4ab0-af90-899c5d7fb1d2)
 
+## Practice 4 Global Navigation
+
+https://www.aulavirtual.urjc.es/moodle/login/index.php?authCASattras=CASattras
 
