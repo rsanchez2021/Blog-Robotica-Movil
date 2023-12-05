@@ -145,5 +145,29 @@ This is the final video accelerated x2, if you want to see it at normal speed [c
 
 ## Practice 4 Global Navigation
 
-https://www.aulavirtual.urjc.es/moodle/login/index.php?authCASattras=CASattras
+El objetivo de la práctica es implementar un código enel que se calcule un mapa por gradiente de una ciudad donde hay obstáculos, calcular la ruta a un punto y posteriormente navegar con el taxi hasta el punto.
+
+El primer paso es realizar el mapa de costes con una cola de prioridad. Para ello, he implementado la función binarize_map en la que toma las paredes detectadas y crea un matriz binaria, asignando valores de 255 a las ubicaciones ocupadas y 0 a laslibres. Selecciono las coordenadas de las parede y, mediante un algoritmo, expando la marca hacia las áreas adyacentes a las paredes para asegurar un margen de seguridad alrededor de ellas. Para generar el gradiente y rellenarlo, uso la función fill_gradient que calcula el mapa de costes desde la posición inicial hasta la final. Realiza un procesamiento en cola, expandiendo gradualmente el área de gradiente y fnalmente devuelve las posiciones de los obstáculos detectados durante el llenado. Parahacer esta parte del código, mehe guiado con la función que ya implementamos en la asignatura de Inteligencia Artificial que puedes ver en este [repo](https://gitlab.etsit.urjc.es/rebeca1/inteligencia_artificial/-/tree/main/P1_Search?ref_type=heads).
+
+Aquí hay varios vídeos de como he ido haciendo mapa a lo largo del tiempo
+
+Costes de los obstáculos muy altos, obstáculos muy inflados:
+
+https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/c4f1ce61-a102-4b55-96dc-75887dfc526b
+
+Costes delos obstáculos muy bajos, el coche se come las esquinas
+
+https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/e1e21b89-4f14-4653-9fdc-1ff85bc2b413
+
+Una vez se ha creado el mapa de gradiente, se calcula la trayectoria óptima. Dentro del bucle principal, se está constantemente ajustando la velocidad y la dirección del taxi para seguir la trayectoria, además de comprobar si ha llegado a su destino. Algunas rutas calculadas:
+
+![Screenshot from 2023-12-05 21-40-09](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/eb72b380-a862-44d5-be19-07caa480d3bc)
+
+![Screenshot from 2023-12-05 21-41-18](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/ae2bd770-be1b-4df6-a5fc-7db3862dc310)
+
+![Screenshot from 2023-12-05 21-44-44](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/c33d73ac-b29e-4ebc-b0c6-fbcd7f451e17)
+
+
+
+https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/426b1dc3-8786-4d7d-82c3-7714cc067078
 
