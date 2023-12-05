@@ -6,12 +6,14 @@ Welcome to my personal blog of the Mobile Robotics course of the Robotics Engine
 * [Practice 1][p1]
 * [Practice 2][p2]
 * [Practice 3][p3]
+* [Practice 4][p4]
 
 [Ind]: https://github.com/rsanchez2021/Blog-Robotica-Movil/main/README
 [intro]: https://github.com/rsanchez2021/Blog-Robotica-Movil/blob/main/README.md#introduction
 [p1]: https://github.com/rsanchez2021/Blog-Robotica-Movil/blob/main/README.md#practice-1-vacuum-cleaner
 [p2]: https://github.com/rsanchez2021/Blog-Robotica-Movil/blob/main/README.md#practice-2-follow-line
 [p3]: https://github.com/rsanchez2021/Blog-Robotica-Movil/blob/main/README.md#practice-3-obstacle-avoid
+[p4]: https://github.com/rsanchez2021/Blog-Robotica-Movil/blob/main/README.md#practice-4-global-navigation
 
 
 ## Introduction
@@ -145,9 +147,10 @@ This is the final video accelerated x2, if you want to see it at normal speed [c
 
 ## Practice 4 Global Navigation
 
-El objetivo de la práctica es implementar un código enel que se calcule un mapa por gradiente de una ciudad donde hay obstáculos, calcular la ruta a un punto y posteriormente navegar con el taxi hasta el punto.
+La Práctica 4 tiene como objetivo la implementación de un código que calcule un mapa de gradiente para una ciudad con obstáculos, determine la ruta hacia un punto específico y, finalmente, guíe un taxi hasta ese punto. Este proceso se lleva a cabo en varias etapas, desde la binarización del mapa hasta el control en tiempo real del taxi.
 
-El primer paso es realizar el mapa de costes con una cola de prioridad. Para ello, he implementado la función binarize_map en la que toma las paredes detectadas y crea un matriz binaria, asignando valores de 255 a las ubicaciones ocupadas y 0 a laslibres. Selecciono las coordenadas de las parede y, mediante un algoritmo, expando la marca hacia las áreas adyacentes a las paredes para asegurar un margen de seguridad alrededor de ellas. Para generar el gradiente y rellenarlo, uso la función fill_gradient que calcula el mapa de costes desde la posición inicial hasta la final. Realiza un procesamiento en cola, expandiendo gradualmente el área de gradiente y fnalmente devuelve las posiciones de los obstáculos detectados durante el llenado. Parahacer esta parte del código, mehe guiado con la función que ya implementamos en la asignatura de Inteligencia Artificial que puedes ver en este [repo](https://gitlab.etsit.urjc.es/rebeca1/inteligencia_artificial/-/tree/main/P1_Search?ref_type=heads).
+### Binarización del Mapa y Generación del Gradiente
+El primer paso es la binarización del mapa, donde las paredes detectadas se marcan con el valor 255 y las ubicaciones libres con el valor 0. La función binarize_map utiliza un algoritmo que se expande hacia áreas adyacentes a las paredes para garantizar un margen de seguridad. Posteriormente, la función fill_gradient calcula el mapa de costes desde la posición inicial hasta la final, utilizando una cola de prioridad y expandiendo gradualmente el área de gradiente. Para generar el gradiente y rellenarlo, uso la función fill_gradient que calcula el mapa de costes desde la posición inicial hasta la final. Realiza un procesamiento en cola, expandiendo gradualmente el área de gradiente y fnalmente devuelve las posiciones de los obstáculos detectados durante el llenado. Para hacer esta parte del código, me he guiado con la función que ya implementamos en la asignatura de Inteligencia Artificial que puedes ver en este [repo](https://gitlab.etsit.urjc.es/rebeca1/inteligencia_artificial/-/tree/main/P1_Search?ref_type=heads).
 
 Aquí hay varios vídeos de como he ido haciendo mapa a lo largo del tiempo
 
@@ -159,7 +162,8 @@ Costes delos obstáculos muy bajos, el coche se come las esquinas
 
 https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/e1e21b89-4f14-4653-9fdc-1ff85bc2b413
 
-Una vez se ha creado el mapa de gradiente, se calcula la trayectoria óptima. Dentro del bucle principal, se está constantemente ajustando la velocidad y la dirección del taxi para seguir la trayectoria, además de comprobar si ha llegado a su destino. Algunas rutas calculadas:
+### Cálculo de Trayectoria y Control de Movimiento
+Una vez creado el mapa de gradiente, se calcula la trayectoria óptima utilizando la función extract_path_to_target. El bucle principal del código ajusta constantemente la velocidad y dirección del taxi para seguir la trayectoria. Se muestra una imagen de algunas rutas calculadas:
 
 ![Screenshot from 2023-12-05 21-40-09](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/eb72b380-a862-44d5-be19-07caa480d3bc)
 
@@ -167,7 +171,8 @@ Una vez se ha creado el mapa de gradiente, se calcula la trayectoria óptima. De
 
 ![Screenshot from 2023-12-05 21-44-44](https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/c33d73ac-b29e-4ebc-b0c6-fbcd7f451e17)
 
-
+### Vídeo final
+Si no puedes ver el video pincha [aqui](https://clipchamp.com/watch/u6e6AKlgYMm)
 
 https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/426b1dc3-8786-4d7d-82c3-7714cc067078
 
