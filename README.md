@@ -176,3 +176,16 @@ Si no puedes ver el video pincha [aqui](https://clipchamp.com/watch/u6e6AKlgYMm)
 
 https://github.com/rsanchez2021/Blog-Robotica-Movil/assets/113595025/426b1dc3-8786-4d7d-82c3-7714cc067078
 
+
+## Práctica 4
+
+no usar unibotics, usar el .zip del profesor. dos ficheros nuevos. A la entrega podemos poner el .zip entero y luego poner en el blog cómo ejecutar.
+
+después de poner las particulas -> solo una vez
+bucle continuo:
+    -el robot semueve en función de las particulas. 
+    -las particulas se mueven igual que el robot
+    -darle peso a cada particula -> ¿cómo puedo saber lo buena que es la partícula? -> creo una hipotesis de las particulas (laser_virtual, codigo hecho) y las comparo con lo del robot (hay que hacer lo de comparar el virtual con el real, eso no está hecho). Saco el error y lo traduzco a un peso. Cuanto menos error peso más grande.
+    -Partículas con menos peso "desaparecen" -> no eliminarlas pq sino nos quedamos sin partículas. De esa bolsa, eligo varáis aleatorias y las voy sustituynedo. Usar random.choice de numPY, hay una opción que le puedo meter los pesos de cada elemento y listo. el array P, la suma tiene que dar 1 -> normalizar el vector.
+
+hay un problema con este algoritmo -> el robot se mueve con una velocidad constante, ¿cómo se que cuanto se ha movido? -> una fuente de odometría de la cámara o de la rueda. Con esa odometría muevo también las partículas. estos sistemas tienen error. le sumo un error aleatorio. Esto tiene un problema relacionado con el resample. Al hacer resample las partículas se quedan en el mismo punto, pero como cada particula tiene un error distinto, van a separarse, esto crea una nube. Al final, hago una media de la nube y calculo el error para saber si voy bien o no. El codigoo no termina nunca.
