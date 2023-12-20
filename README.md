@@ -189,3 +189,10 @@ bucle continuo:
     -Partículas con menos peso "desaparecen" -> no eliminarlas pq sino nos quedamos sin partículas. De esa bolsa, eligo varáis aleatorias y las voy sustituynedo. Usar random.choice de numPY, hay una opción que le puedo meter los pesos de cada elemento y listo. el array P, la suma tiene que dar 1 -> normalizar el vector.
 
 hay un problema con este algoritmo -> el robot se mueve con una velocidad constante, ¿cómo se que cuanto se ha movido? -> una fuente de odometría de la cámara o de la rueda. Con esa odometría muevo también las partículas. estos sistemas tienen error. le sumo un error aleatorio. Esto tiene un problema relacionado con el resample. Al hacer resample las partículas se quedan en el mismo punto, pero como cada particula tiene un error distinto, van a separarse, esto crea una nube. Al final, hago una media de la nube y calculo el error para saber si voy bien o no. El codigoo no termina nunca.
+
+
+
+Hay un problema -> el tener que hacer el laser virtual de tantas partículas y tener que comparar cada uno de los rayos (180) va muy lento. hay varias opciones para solucionarlo
+    - lanzar menos rayos (1 de cada 5 de lso 180) -> menos información también se puede poner 1 de cada 10 
+    - Usar la librería multiprocesing y que cada hili haga un cierto numero de particulas -> más complicado pero reduce 1/3 el tiempo
+    - hacer la imagen más pequeña -> descargar la nueva versión. además se ha cambiado una función de pasar coordenadas del mapa.
